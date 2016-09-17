@@ -4,8 +4,8 @@ MAINTAINER Dmitry Pranchuk <d.pranchuk@gmail.com>
 
 RUN apt-get -y update
 RUN apt-get -y install curl
-RUN curl -s http://ftp.byfly.by/pub/apache.org/spark/spark-1.6.1/spark-1.6.1-bin-hadoop2.6.tgz | tar -xz -C /usr/local/
-RUN cd /usr/local && ln -s spark-1.6.1-bin-hadoop2.6 spark
+RUN curl -s http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-hadoop2.7.tgz | tar -xz -C /usr/local/
+RUN cd /usr/local && ln -s spark-2.0.0-bin-hadoop2.7 spark
 ADD scripts/start-master.sh /start-master.sh
 ADD scripts/start-worker /start-worker.sh
 ADD scripts/spark-shell.sh  /spark-shell.sh
